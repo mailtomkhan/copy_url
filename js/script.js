@@ -1,12 +1,20 @@
 
 $(document).ready(function() {
-  var myWords = ["Rock", "Paper", "Your Mom"];
+  var userChoice;
+  var computerChoice;
+  var userScore = 0;
+  var computerScore = 0;
+  var roundCounter = 1;
+  var computerOptions = [
+    "Rock",
+    "Paper",
+    "Your Mom"
+  ]
 
-  $("#changeWordBtn").on("click", function() {
-    var myRandomNumber = Math.floor(Math.random() * myWords.length);
-    $("h1").html(function() {
-      $(this).html(myWords[myRandomNumber]);
-
+  $(".btn-primary").on("click", function(){
+      userChoice = this.id;
+      computerChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
+      console.log(userChoice, computerChoice);
     });
-  });
+
 });
