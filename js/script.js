@@ -14,7 +14,17 @@ $(document).ready(function() {
   $(".btn-primary").on("click", function(){
       userChoice = this.id;
       computerChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
+      if(userChoice === computerChoice) {
+        alert("TIE MUTHAFUCKA")
+
+      } else if (userChoice === "Rock" && computerChoice === "Your Mom") {
+        alert("YOU WIN DICKBAG")
+      }
       console.log(userChoice, computerChoice);
     });
+
+
+
+
 
 });
